@@ -1,3 +1,4 @@
+import { Email, Phone } from "@mui/icons-material";
 import React, { useState } from "react";
 
 function About() {
@@ -26,7 +27,13 @@ function About() {
           headers: {
             "Content-Type": "Application/json",
           },
-          body: JSON.stringify(userInfo),
+          body: JSON.stringify({FirstName: userInfo.FirstName ,
+            LastName : userInfo.LastName,
+            Email : userInfo.Email,
+            Phone : userInfo .Phone,
+            Age : userInfo.Age,
+            Birthday:userInfo.Birthday
+          }),
         }
       );
       if (response.ok) {

@@ -43,7 +43,7 @@ function Navbar() {
                 Login
               </button>
             </Link>
-            <Link to="/register">
+            <Link to = "/register">
               <button className="btn btn-outline-primary mx-2" type="submit">
                 Register
               </button>

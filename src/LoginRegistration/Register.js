@@ -7,6 +7,7 @@ const navigate = useNavigate()
         UserName: "",
         Email: "",
         Password: "",
+        ConfirmPassword:"",
         Contact:"",
         Address:""
     })
@@ -25,7 +26,7 @@ const navigate = useNavigate()
                 headers: {
                     "Content-Type": "Application/json"
                 },
-                body: JSON.stringify(user)
+                body: JSON.stringify({user})
             })
             if (response.ok) {
                 const data = await response.json()
@@ -118,6 +119,21 @@ const navigate = useNavigate()
                         name='Password'
                         required
                         value={user.Password}
+                        onChange={InputEvent}
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleFormControlInput1" className="form-label">
+                       Confirm Password
+                    </label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        id="password"
+                        placeholder="Confirm password"
+                        name='ConfirmPassword'
+                        required
+                        value={user.ConfirmPassword}
                         onChange={InputEvent}
                     />
                 </div>

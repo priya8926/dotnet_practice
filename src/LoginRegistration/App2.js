@@ -5,6 +5,7 @@ import Login from "./Login";
 import Register from "./Register";
 import Navbar from "./Navbar";
 import About from "./About";
+import Info from "./Info";
 
 function App2() {
   return (
@@ -15,6 +16,7 @@ function App2() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
+        <Route path="/info" element={<Info />} />
       </Routes>
     </>
   );
